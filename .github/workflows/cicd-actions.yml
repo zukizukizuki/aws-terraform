@@ -20,7 +20,7 @@ jobs:
               with:
                terraform_version: ${{ env.TF_VERSION }}
 
-            - uses: aws-actions/configure-aws-credentials@master
+            - uses: aws/aws-sdk-js-v3@master
               with:
                  role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/mnagaa-github-actions-ro-role
                  aws-region: ${{ env.AWS_REGION }}
