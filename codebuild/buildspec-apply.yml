@@ -8,5 +8,5 @@ phases:
 
   build:
     commands:
-      - chmod +x ${CODEBUILD_SRC_DIR}/scripts/dryrun.sh
-      - ${CODEBUILD_SRC_DIR}/scripts/dryrun.sh
+      - chmod +x ${CODEBUILD_SRC_DIR}/scripts/apply.sh
+      - ${CODEBUILD_SRC_DIR}/scripts/apply.sh
