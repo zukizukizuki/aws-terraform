@@ -3,8 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
+      - chmod +x ${CODEBUILD_SRC_DIR}/scripts/install.sh
       - ${CODEBUILD_SRC_DIR}/scripts/install.sh
 
   build:
     commands:
+      - chmod +x ${CODEBUILD_SRC_DIR}/scripts/plan.sh
       - ${CODEBUILD_SRC_DIR}/scripts/plan.sh
