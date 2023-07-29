@@ -9,4 +9,4 @@ phases:
   build:
     commands:
       - chmod +x ${CODEBUILD_SRC_DIR}/scripts/plan.sh
-      - ${CODEBUILD_SRC_DIR}/scripts/plan.sh
+      - ${CODEBUILD_SRC_DIR}/scripts/dryrun.sh
