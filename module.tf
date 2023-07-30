@@ -1,4 +1,4 @@
-module "sqs" {
-  source  = "./module/sqs"
-  name = "terraform-test-sqs"
-}
+# module "sqs" {
+#   source  = "./module/sqs"
+#   name = "terraform-test-sqs"
+# }
