@@ -67,7 +67,7 @@ resource "aws_codebuild_project" "terraform_dryrun" {
   }
   lifecycle {
     ignore_changes = [
-      environment.environment_variable[0]
+      environment[0].environment_variable[0]
      ]
   }
 }
@@ -138,7 +138,7 @@ resource "aws_codebuild_project" "terraform_apply" {
   }
   lifecycle {
     ignore_changes = [
-      environment.environment_variable[0]
+      environment[0].environment_variable[0]
      ]
   }
 }
