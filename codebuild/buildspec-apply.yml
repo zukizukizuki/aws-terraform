@@ -8,5 +8,6 @@ phases:
 
   build:
     commands:
+      - export userID
       - chmod +x ${CODEBUILD_SRC_DIR}/scripts/apply.sh
       - ${CODEBUILD_SRC_DIR}/scripts/apply.sh
