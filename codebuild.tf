@@ -2,6 +2,8 @@
 # Please review these resources and move them into your main configuration files.
 
 # __generated__ by Terraform from "terraform-dryrun"
+
+variable "userID" {}
 resource "aws_codebuild_project" "terraform_dryrun" {
   badge_enabled          = false
   build_timeout          = 60
