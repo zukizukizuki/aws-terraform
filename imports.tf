@@ -16,7 +16,7 @@ import {
 }
 
 import {
-  to = aws_iam_role.terraform_plan
+  to = aws_iam_role.terraform_apply
   id = "codebuild-t-service-role"
 }
 
