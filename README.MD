@@ -7,7 +7,7 @@
 ### Description
 
 - aws環境のインフラ構成をテストするterraformです
-- 公開したくない情報は "terraform_secret.tfvars" に変数として
+- 公開したくない情報は "terraform.tfvars" に変数として
 　定義しますがignoreするのでリポジトリにはありません
 - codebuildでCI/CDを組んでいます
 - 手動実行/自動実行の2通りです
@@ -30,7 +30,7 @@ aws-terraform
 │  codebuild.tf
 │  README.MD
 │  ※その他のtfファイル
-│  terraform_secret.tfvars(ignoreします)
+│  terraform.tfvars(ignoreします)
 │
 ├─codebuild
 │  buildspec-apply.yml

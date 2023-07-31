@@ -3,7 +3,6 @@
 
 # __generated__ by Terraform from "terraform-dryrun"
 resource "aws_codebuild_project" "terraform_dryrun" {
-  userID                 = var.userID
   badge_enabled          = false
   build_timeout          = 60
   concurrent_build_limit = 1
@@ -59,7 +58,7 @@ resource "aws_codebuild_project" "terraform_dryrun" {
     buildspec           = "codebuild/buildspec-dryrun.yml"
     git_clone_depth     = 1
     insecure_ssl        = false
-    location            = "https://github.com/${var.userID}/aws-terraform.git"
+    location            = "https://github.com/zukizukizuki/aws-terraform.git"
     report_build_status = false
     type                = "GITHUB"
     git_submodules_config {
@@ -125,7 +124,7 @@ resource "aws_codebuild_project" "terraform_apply" {
     buildspec           = "codebuild/buildspec-apply.yml"
     git_clone_depth     = 1
     insecure_ssl        = false
-    location            = "https://github.com/${var.userID}/aws-terraform.git"
+    location            = "https://github.com/zukizukizuki/aws-terraform.git"
     report_build_status = false
     type                = "GITHUB"
     git_submodules_config {
