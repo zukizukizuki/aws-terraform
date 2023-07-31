@@ -65,6 +65,11 @@ resource "aws_codebuild_project" "terraform_dryrun" {
       fetch_submodules = false
     }
   }
+  lifecycle {
+    ignore_changes = [ 
+      environment.environment_variable
+     ]
+  }
 }
 
 # __generated__ by Terraform from "terraform-apply"
@@ -131,6 +136,11 @@ resource "aws_codebuild_project" "terraform_apply" {
       fetch_submodules = false
     }
   }
+  lifecycle {
+    ignore_changes = [ 
+      environment.environment_variable
+     ]
+  }
 }
 
 # __generated__ by Terraform from "arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-apply-ap-northeast-1"
@@ -160,7 +170,7 @@ resource "aws_iam_role" "terraform_plan" {
   assume_role_policy    = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"codebuild.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}"
   description           = null
   force_detach_policies = false
-  managed_policy_arns   = ["arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-dryrun-ap-northeast-1", "arn:aws:iam::aws:policy/PowerUserAccess"]
+  managed_policy_arns   = ["arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-dryrun-ap-northeast-1", "arn:aws:iam::aws:policy/PowerUserAccess" , "arn:aws:iam::aws:policy/IAMReadOnlyAccess"]
   max_session_duration  = 3600
   name                  = "codebuild-s-service-role"
   name_prefix           = null
@@ -175,7 +185,7 @@ resource "aws_iam_role" "terraform_apply" {
   assume_role_policy    = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"codebuild.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}"
   description           = null
   force_detach_policies = false
-  managed_policy_arns   = ["arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-apply-ap-northeast-1", "arn:aws:iam::aws:policy/PowerUserAccess"]
+  managed_policy_arns   = ["arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-apply-ap-northeast-1", "arn:aws:iam::aws:policy/PowerUserAccess" , "arn:aws:iam::aws:policy/IAMReadOnlyAccess"]
   max_session_duration  = 3600
   name                  = "codebuild-t-service-role"
   name_prefix           = null
