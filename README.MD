@@ -7,8 +7,7 @@
 ### Description
 
 - aws環境のインフラ構成をテストするterraformです
-- 公開したくない情報は "terraform.tfvars" に変数として
-　定義しますがignoreするのでリポジトリにはありません
+- 公開したくない情報はAWSの環境変数に定義します
 - codebuildでCI/CDを組んでいます
 - 手動実行/自動実行の2通りです
 
