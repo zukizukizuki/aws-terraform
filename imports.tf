@@ -23,10 +23,10 @@ import {
 #ポリシー
 import {
   to = aws_iam_policy.terraform_apply
-  id = "arn:aws:iam::776811705601:policy/service-role/CodeBuildBasePolicy-terraform-apply-ap-northeast-1"
+  id = "arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-apply-ap-northeast-1"
 }
 
 import {
   to = aws_iam_policy.terraform_dryrun
-  id = "arn:aws:iam::776811705601:policy/service-role/CodeBuildBasePolicy-terraform-dryrun-ap-northeast-1"
+  id = "arn:aws:iam::${var.USERID}:policy/service-role/CodeBuildBasePolicy-terraform-dryrun-ap-northeast-1"
 }
