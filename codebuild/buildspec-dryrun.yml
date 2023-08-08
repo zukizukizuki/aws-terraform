@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  parameter-store:
+    GITHUB_TOKEN: "codebuild-github-token"
+
 phases:
   install:
     commands:
