@@ -7,7 +7,8 @@
 ### Description
 
 - aws環境のインフラ構成をテストするterraformです
-- 公開したくない情報はAWSの環境変数に定義します
+- AWSのUserIDはCodeBUildの環境変数に定義します
+- tfcmt使用のため SSM Parameter Storeで `codebuild-github-token` を定義しaccess tokenを保存する
 - codebuildでCI/CDを組んでいます
 - 手動実行/自動実行の2通りです
 
