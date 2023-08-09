@@ -3,6 +3,7 @@ version: 0.2
 env:
   parameter-store:
     GITHUB_TOKEN: "codebuild-github-token"
+    userID: "user_id"
 
 phases:
   install:
