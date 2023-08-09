@@ -17,4 +17,4 @@ mv /tmp/tfcmt /usr/local/bin/tfcmt
 unset GITHUB_TOKEN
 curl -s https://raw.githubusercontent.com/terraform-linters/tflint/${TFLINT_VERSION}/install_linux.sh | bash
 # TFLINT_LOG=debug
-tflint --init
+tflint --init --config=.tflint.hcl
