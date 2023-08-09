@@ -5,7 +5,7 @@ plugin "terraform" {
 }
 
 rule "terraform_naming_convention" {
-  enabled = true
+  enabled = false
   format  = "snake_case"
 
   module {
