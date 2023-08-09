@@ -1,6 +1,5 @@
 plugin "terraform" {
   enabled = true
-  preset  = "recommended"
   version = "0.4.0"
   source  = "github.com/terraform-linters/tflint-ruleset-terraform"
 }
@@ -39,7 +38,7 @@ rule "terraform_comment_syntax" {
 }
 
 rule "terraform_documented_variables" {
-  enabled = false
+  enabled = true
 }
 
 rule "terraform_documented_outputs" {
