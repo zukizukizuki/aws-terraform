@@ -3,14 +3,18 @@
 ### Requirements
 
 - terraform ~> 1.5.4
+- tfcmt     = v4.4.3
+- tflint    = v0.47.0
 
 ### Description
 
 - aws環境のインフラ構成をテストするterraformです
 - AWSのUserIDはCodeBUildの環境変数に定義します
-- tfcmt使用のため SSM Parameter Storeで `codebuild-github-token` を定義しaccess tokenを保存する
 - codebuildでCI/CDを組んでいます
 - 手動実行/自動実行の2通りです
+- tfcmtを使用してPRにCI/CD結果を通知する実装です
+- tfcmt使用のため SSM Parameter Storeで `codebuild-github-token` を定義しaccess tokenを保存する
+- tflintで一部ルールを設けてルールを破るとエラーを出す実装にしています
 
 ### execution method
 
@@ -26,6 +30,7 @@
 ```text
 aws-terraform
 │  .gitignore
+│  .tflint.hcl
 │  backend.tf
 │  codebuild.tf
 │  README.MD
