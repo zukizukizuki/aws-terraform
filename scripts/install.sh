@@ -16,4 +16,6 @@ mv /tmp/tfcmt /usr/local/bin/tfcmt
 # GITHUB_TOKENを使って401が出るので削除
 unset GITHUB_TOKEN
 curl -s https://raw.githubusercontent.com/terraform-linters/tflint/${TFLINT_VERSION}/install_linux.sh | bash
-TFLINT_LOG=debug tflint --init
+# TFLINT_LOG=debug
+tflint --init
+tflint

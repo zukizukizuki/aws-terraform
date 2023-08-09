@@ -1,1 +1,3 @@
-variable "USERID" {}
+variable "USERID" {
+    type = number
+}
