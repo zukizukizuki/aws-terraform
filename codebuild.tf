@@ -65,11 +65,6 @@ resource "aws_codebuild_project" "terraform_dryrun" {
       fetch_submodules = false
     }
   }
-  lifecycle {
-    ignore_changes = [
-      environment["environment_variable"]
-     ]
-  }
 }
 
 # __generated__ by Terraform from "terraform-apply"
@@ -135,11 +130,6 @@ resource "aws_codebuild_project" "terraform_apply" {
     git_submodules_config {
       fetch_submodules = false
     }
-  }
-  lifecycle {
-    ignore_changes = [
-      environment["environment_variable"]
-     ]
   }
 }
 
